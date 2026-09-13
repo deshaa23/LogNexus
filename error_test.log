@@ -1,0 +1,57 @@
+2026-09-14 10:00:01 INFO API RequestID=REQ1001 Request received from client
+2026-09-14 10:00:01 INFO AuthService RequestID=REQ1001 Authentication started
+2026-09-14 10:00:02 INFO AuthService RequestID=REQ1001 Authentication successful
+2026-09-14 10:00:02 INFO API RequestID=REQ1001 Forwarding request to OrderService
+2026-09-14 10:00:03 INFO OrderService RequestID=REQ1001 Order processing started
+2026-09-14 10:00:04 INFO Database RequestID=REQ1001 Database query started
+2026-09-14 10:00:05 WARNING Database RequestID=REQ1001 Database response slower than expected
+2026-09-14 10:00:08 ERROR Database RequestID=REQ1001 Connection timeout while executing order query
+2026-09-14 10:00:09 ERROR OrderService RequestID=REQ1001 Database request failed
+2026-09-14 10:00:09 ERROR API RequestID=REQ1001 Order processing failed
+
+2026-09-14 10:01:01 INFO API RequestID=REQ1002 Request received from client
+2026-09-14 10:01:02 INFO AuthService RequestID=REQ1002 Authentication successful
+2026-09-14 10:01:03 INFO OrderService RequestID=REQ1002 Order processing started
+2026-09-14 10:01:04 ERROR Database RequestID=REQ1002 Connection refused by database server
+2026-09-14 10:01:04 ERROR OrderService RequestID=REQ1002 Database service failed
+2026-09-14 10:01:05 ERROR API RequestID=REQ1002 Order request failed
+
+2026-09-14 10:02:01 INFO API RequestID=REQ1003 Request received from client
+2026-09-14 10:02:02 INFO PaymentService RequestID=REQ1003 Payment processing started
+2026-09-14 10:02:04 WARNING PaymentService RequestID=REQ1003 Payment provider response delayed
+2026-09-14 10:02:07 ERROR PaymentService RequestID=REQ1003 Payment provider unavailable
+2026-09-14 10:02:08 ERROR API RequestID=REQ1003 Payment request failed
+
+2026-09-14 10:03:01 INFO API RequestID=REQ1004 Request received from client
+2026-09-14 10:03:02 INFO InventoryService RequestID=REQ1004 Inventory check started
+2026-09-14 10:03:03 INFO InventoryService RequestID=REQ1004 Inventory available
+2026-09-14 10:03:04 INFO API RequestID=REQ1004 Request completed successfully
+
+2026-09-14 10:04:01 INFO API RequestID=REQ1005 Request received from client
+2026-09-14 10:04:02 INFO OrderService RequestID=REQ1005 Order processing started
+2026-09-14 10:04:03 ERROR OrderService RequestID=REQ1005 Internal processing failure
+2026-09-14 10:04:04 ERROR API RequestID=REQ1005 Order request failed
+
+2026-09-14 10:05:01 INFO API RequestID=REQ1006 Request received from client
+2026-09-14 10:05:02 INFO Database RequestID=REQ1006 Database query started
+2026-09-14 10:05:03 ERROR Database RequestID=REQ1006 Connection timeout while fetching customer data
+2026-09-14 10:05:04 ERROR API RequestID=REQ1006 Customer request failed
+
+2026-09-14 10:06:01 INFO API RequestID=REQ1007 Request received from client
+2026-09-14 10:06:02 WARNING API RequestID=REQ1007 Request processing time exceeded threshold
+2026-09-14 10:06:03 INFO API RequestID=REQ1007 Request completed successfully
+
+2026-09-14 10:07:01 INFO API RequestID=REQ1008 Request received from client
+2026-09-14 10:07:02 INFO NotificationService RequestID=REQ1008 Notification processing started
+2026-09-14 10:07:04 ERROR NotificationService RequestID=REQ1008 Notification service unavailable
+2026-09-14 10:07:05 ERROR API RequestID=REQ1008 Notification request failed
+
+2026-09-14 10:08:01 INFO API RequestID=REQ1009 Request received from client
+2026-09-14 10:08:02 INFO Database RequestID=REQ1009 Database query started
+2026-09-14 10:08:03 INFO Database RequestID=REQ1009 Database query completed
+2026-09-14 10:08:04 INFO API RequestID=REQ1009 Request completed successfully
+
+2026-09-14 10:09:01 INFO API RequestID=REQ1010 Request received from client
+2026-09-14 10:09:02 INFO AuthService RequestID=REQ1010 Authentication successful
+2026-09-14 10:09:03 ERROR AuthService RequestID=REQ1010 Authentication service failure
+2026-09-14 10:09:04 ERROR API RequestID=REQ1010 Authentication request failed

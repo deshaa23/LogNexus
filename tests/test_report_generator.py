@@ -70,10 +70,31 @@ def test_report_contains_root_cause_details() -> None:
     report = generate_report(analysis, [root_cause])
 
     assert "Request ID: REQ001" in report
+    assert "Root Cause: Connection refused" in report
     assert "Service: DatabaseService" in report
     assert "Message: Connection refused" in report
     assert "Severity: CRITICAL" in report
+    assert "Failure Pattern: CONNECTION_REFUSED" in report
     assert "Affected services: ApiService" in report
+    assert "Recommended Actions:" in report
+    assert "Check whether the target service is running" in report
+
+
+def test_report_handles_unrecognized_root_cause_pattern() -> None:
+    analysis = AnalysisResult({}, [], [], set())
+    root_cause = RootCauseResult(
+        request_id="REQ002",
+        root_cause_service="WorkerService",
+        root_cause_message="Unexpected issue",
+        severity="MEDIUM",
+        affected_services=[],
+    )
+
+    report = generate_report(analysis, [root_cause])
+
+    assert "Failure Pattern: Unknown" in report
+    assert "Recommended Actions:" in report
+    assert "No rule-based recommendation available." in report
 
 
 def test_report_handles_no_root_causes() -> None:
