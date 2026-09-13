@@ -1,0 +1,3 @@
+2026-09-13 09:15:02 INFO ApplicationService RequestID=REQ001 Application started
+2026-09-13 09:15:04 WARNING CacheService RequestID=REQ002 Cache directory is missing
+2026-09-13 09:15:05 ERROR ConfigurationService RequestID=REQ003 Unable to load configuration
